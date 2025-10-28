@@ -28,6 +28,7 @@ app.use(cookieParser());
 app.use(
 	cors({
 		origin: "https://ace-edify.vercel.app/",
+		methods: ["GET", "POST", "PUT", "DELETE"],
 		credentials: true,
 	})
 );
