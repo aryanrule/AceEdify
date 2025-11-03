@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: ["https://ace-edify.vercel.app/", "http://localhost:3000" ] , 
+		origin: ["https://ace-edify.vercel.app", "http://localhost:3000" ] , 
 		methods: ["GET", "POST", "PUT", "DELETE"],
 		credentials: true,
 	})
@@ -56,7 +56,7 @@ app.get("/", (req, res) => {
 		message: "Your server is up and running ... ",
 	});
 });
-
+ 
 // Listening to the server
 app.listen(4000, () => {
 	console.log(`App is listening at ${PORT}`);
