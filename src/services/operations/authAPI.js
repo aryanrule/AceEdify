@@ -16,6 +16,7 @@ const {
 
 export function sendOtp(email, navigate) {
   return async (dispatch) => {
+    console.log("sendotp_Api", SENDOTP_API); 
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
@@ -55,6 +56,7 @@ export function signUp(
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
+    console.log("SIGNUP_API" , SIGNUP_API);  
     try {
       const response = await apiConnector("POST", SIGNUP_API, {
         accountType,
